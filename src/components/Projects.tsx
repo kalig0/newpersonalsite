@@ -6,7 +6,7 @@ const projects = [
         title: "ASSISTments",
         type: "Research Project",
         description: [
-            "Fine-tuned large language models to enhance the accuracy of feedback to math questions.",
+            "Fine-tuned large language models to enhance the accuracy of feedback for student responses to math questions.",
             "Trained models on millions of student response data to develop and implement effective improvement strategies for student feedback.",
             "Implemented vector database using FAISS to generate feedback and score for student responses with retrieval augmented generation, improving large language model generated content accuracy by 30%."
         ],
