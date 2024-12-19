@@ -10,7 +10,7 @@ const projects = [
             "Trained models on millions of student response data to develop and implement effective improvement strategies for student feedback.",
             "Implemented vector database using FAISS to generate feedback and score for student responses with retrieval augmented generation, improving large language model generated content accuracy by 30%."
         ],
-        technologies: ["Python", "TensorFlow", "LLMs", "Fine Tuning", "Prompt Engineering", "Vector Database"],
+        technologies: ["Python", "TensorFlow", "LLMs", "RAG", "Fine Tuning", "Prompt Engineering", "Vector Database"],
     }
 ];
 
