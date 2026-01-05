@@ -2,6 +2,24 @@ import { FC } from 'react';
 
 const experiences = [
     {
+        date: "Jan 2025 — Present",
+        role: "Software Development Engineer",
+        company: "eGain",
+        companyUrl: "https://www.egain.com/",
+        description: [
+            "Built end-to-end AI agent pipelines integrating embeddings, OpenSearch, rerankers, and LLM prompts with system/user instruction separation.",
+            "Led development of reusable chat widget infrastructure, supporting authentication, portal selection, and multi-tenant embedding across customer environments.",
+            "Migrated and standardized search APIs and OpenSearch schemas to support keyword and semantic search, multilingual responses, and consistent response contracts.",
+            "Implemented batching, ingestion, and comparison APIs to ensure consistency between search indexes and source-of-truth data.",
+            "Implemented caching, metadata pipelines, and analytics hooks to improve AI agent response quality, correctness, and performance.",
+            "Owned Dockerized microservices and deployment workflows across environments, improving reliability and developer ergonomics.",
+            "Integrated security and compliance tooling (Fortify, FOSSA, FedRAMP workflows) into CI/CD pipelines.",
+            "Designed and maintained cloud-native AI services using Docker, AWS, OpenSearch, DynamoDB, SQS, and S3.",
+            "Improved deployment workflows using Makefiles and environment-aware scripts, laying groundwork for Terraform-based infrastructure."
+        ],
+        technologies: ["Python", "TypeScript", , "Docker", "OpenSearch", "LLMs"]
+    },
+    {
         date: "May — Jul 2024",
         role: "Machine Learning Engineer Intern",
         company: "CVTE",
