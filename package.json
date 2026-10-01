@@ -5,16 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "postbuild": "cp -r static dist/static",
+    "build": "tsc --noEmit -p tsconfig.app.json && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "resume": "python3 scripts/build_resume.py"
   },
   "dependencies": {
-    "@gsap/react": "^2.1.1",
-    "gsap": "^3.12.5",
-    "lenis": "^1.1.18",
-    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-scrollbar": "^3.1.0"

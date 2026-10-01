@@ -1,50 +1,42 @@
-# React + TypeScript + Vite
+# Daniel Yu's portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React + TypeScript portfolio focused on production AI engineering.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```sh
+npm install
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Content and résumé
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Edit `src/content/portfolio.json` to update profile copy, case studies, experience,
+education, and technical skills. Website and résumé use this same content; the
+external source CV is not needed at runtime or build time.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+After changing résumé content, regenerate the two-page PDF:
+
+```sh
+python3 -m pip install reportlab pypdf
+npm run resume
 ```
+
+In Codex, use the bundled Python runtime with these packages already installed.
+The generator validates the page count and selectable text, and writes
+`output/pdf/daniel-yu-resume.pdf` plus `public/static/resume.pdf`. Render and inspect
+both pages after edits. Vite serves the web asset at `/static/resume.pdf` in local
+and production builds.
+
+## Validation and production build
+
+```sh
+npm run typecheck
+npm run lint
+npm run build
+npm run preview
+```
+
+The build checks application TypeScript before generating `dist/`. Native anchor
+navigation, keyboard-accessible disclosure panels, and reduced-motion support
+require no animation libraries. The site is static and has no contact backend.

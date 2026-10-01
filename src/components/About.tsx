@@ -1,55 +1,10 @@
-import { FC } from 'react';
+import { portfolio } from '../content/portfolio';
 
-const aboutItems = [
-    {
-        label: "Years of experience",
-        number: 2,
-    },
-    {
-        label: "Projects done",
-        number: 10,
-    },
-];
-
-const About: FC = () => {
-    return (
-        <section
-            id="about"
-            className="section"
-        >
-            <div className="container">
-                <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
-                    <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
-                        Welcome! I'm Daniel, a results-driven Machine Learning Engineer and Software Developer with over a year of experience in developing machine learning models, fine-tuning large language models, and implementing full-stack applications. 
-                        I will work with your vision to create effective and scalable real-world products.
-                    </p>
-
-                    <div className="flex flex-wrap items-center gap-4 md:gap-7">
-                        {
-                            aboutItems.map(({ label, number }) =>(
-                                <div key={label}>
-                                    <div className="flex items-center md:mb-2">
-                                        <span className="text-2xl font-semibold md:text-4xl">{number}</span>
-                                        <span className="text-sky-400 font-semibold md:text-3xl">+</span>
-                                    </div>
-
-                                    <p className="text-sm text-zinc-400">{label}</p>
-                                </div>
-                            ))
-                        }
-
-                        <img
-                            src="/images/icon.ico"
-                            alt="Logo"
-                            width={30}
-                            height={30}
-                            className="ml-auto md:w-[40px] md:h-[40px]"
-                        />
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
+export default function About() {
+  return <section className="about-section" id="about" aria-labelledby="about-title"><div className="container section">
+    <p className="eyebrow">{portfolio.sections.about.eyebrow}</p>
+    <div className="about-grid"><div className="about-copy"><h2 id="about-title">{portfolio.sections.about.title}</h2><p>{portfolio.profile.about}</p><div className="portrait-signature"><img src="/images/avatar.jpg" width="72" height="72" loading="lazy" alt="Daniel Yu" /><div><span className="signature">Daniel Yu</span><span className="portrait-caption">Software engineer. Always learning.</span></div></div></div>
+      <div className="about-background"><h3 className="small-label">Education</h3><div className="education-list">{portfolio.education.map(item => <div className="education-item" key={item.school}><h4>{item.degree}</h4><p>{item.school}</p><span>{item.date}</span></div>)}</div><h3 className="small-label skills-heading">Technical strengths</h3><dl className="skills-list">{portfolio.skills.map(group => <div key={group.label}><dt>{group.label}</dt><dd>{group.items.join(' · ')}</dd></div>)}</dl></div>
+    </div>
+  </div></section>;
 }
-
-export default About;
