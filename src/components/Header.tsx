@@ -29,7 +29,7 @@ export default function Header() {
 
   return <header className="site-header" ref={header}>
     <div className="container header-inner">
-      <a className="wordmark" href="#home" onClick={() => setOpen(false)} aria-label="Daniel Yu, home">Daniel Yu<span className="wordmark-dot">.</span></a>
+      <div className="identity"><a className="wordmark" href="#home" onClick={() => setOpen(false)} aria-label="Daniel Yu, home">Daniel Yu</a><p>{portfolio.profile.role}.<br />{' '}{portfolio.profile.current}.</p></div>
       <button className="menu-toggle" ref={menuButton} aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen(!open)}>
         {open ? 'Close' : 'Menu'}<span className={open ? 'menu-icon is-open' : 'menu-icon'} aria-hidden="true"><i /><i /></span>
       </button>

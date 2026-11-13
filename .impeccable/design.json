@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-13T08:40:22.534236+00:00",
+  "title": "Design System: Daniel Yu \u2014 Engineering Journal",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0035 91.48)",
+          "oklch(27% 0.0057 91.48)",
+          "oklch(38% 0.0072 91.48)",
+          "oklch(50% 0.0081 91.48)",
+          "oklch(61% 0.0081 91.48)",
+          "oklch(73% 0.0071 91.48)",
+          "oklch(84% 0.0055 91.48)",
+          "oklch(95% 0.0035 91.48)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Journal Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0021 173.93)",
+          "oklch(27% 0.0034 173.93)",
+          "oklch(38% 0.0043 173.93)",
+          "oklch(50% 0.0049 173.93)",
+          "oklch(61% 0.0048 173.93)",
+          "oklch(73% 0.0043 173.93)",
+          "oklch(84% 0.0033 173.93)",
+          "oklch(95% 0.0021 173.93)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Quiet Graphite",
+        "tonalRamp": [
+          "oklch(15% 0.0040 139.44)",
+          "oklch(27% 0.0066 139.44)",
+          "oklch(38% 0.0084 139.44)",
+          "oklch(50% 0.0095 139.44)",
+          "oklch(61% 0.0094 139.44)",
+          "oklch(73% 0.0083 139.44)",
+          "oklch(84% 0.0064 139.44)",
+          "oklch(95% 0.0040 139.44)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Journal Vermilion",
+        "tonalRamp": [
+          "oklch(15% 0.0721 33.44)",
+          "oklch(27% 0.1182 33.44)",
+          "oklch(38% 0.1505 33.44)",
+          "oklch(50% 0.1692 33.44)",
+          "oklch(61% 0.1684 33.44)",
+          "oklch(73% 0.1481 33.44)",
+          "oklch(84% 0.1147 33.44)",
+          "oklch(95% 0.0721 33.44)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Pencil Rule",
+        "tonalRamp": [
+          "oklch(15% 0.0049 118.10)",
+          "oklch(27% 0.0080 118.10)",
+          "oklch(38% 0.0101 118.10)",
+          "oklch(50% 0.0114 118.10)",
+          "oklch(61% 0.0114 118.10)",
+          "oklch(73% 0.0100 118.10)",
+          "oklch(84% 0.0077 118.10)",
+          "oklch(95% 0.0049 118.10)"
+        ]
+      },
+      "workflow-green": {
+        "role": "secondary",
+        "displayName": "Workflow Forest",
+        "tonalRamp": [
+          "oklch(15% 0.0147 169.54)",
+          "oklch(27% 0.0242 169.54)",
+          "oklch(38% 0.0308 169.54)",
+          "oklch(50% 0.0346 169.54)",
+          "oklch(61% 0.0344 169.54)",
+          "oklch(73% 0.0303 169.54)",
+          "oklch(84% 0.0235 169.54)",
+          "oklch(95% 0.0147 169.54)"
+        ]
+      },
+      "research-blue": {
+        "role": "secondary",
+        "displayName": "Research Slate",
+        "tonalRamp": [
+          "oklch(15% 0.0114 252.81)",
+          "oklch(27% 0.0186 252.81)",
+          "oklch(38% 0.0237 252.81)",
+          "oklch(50% 0.0266 252.81)",
+          "oklch(61% 0.0265 252.81)",
+          "oklch(73% 0.0233 252.81)",
+          "oklch(84% 0.0181 252.81)",
+          "oklch(95% 0.0114 252.81)"
+        ]
+      },
+      "about-paper": {
+        "role": "neutral",
+        "displayName": "Inset Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0047 89.73)",
+          "oklch(27% 0.0077 89.73)",
+          "oklch(38% 0.0098 89.73)",
+          "oklch(50% 0.0111 89.73)",
+          "oklch(61% 0.0110 89.73)",
+          "oklch(73% 0.0097 89.73)",
+          "oklch(84% 0.0075 89.73)",
+          "oklch(95% 0.0047 89.73)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Masthead",
+        "purpose": "Personal name in the header."
+      },
+      "headline": {
+        "displayName": "Lead project",
+        "purpose": "First project heading."
+      },
+      "section": {
+        "displayName": "Section heading",
+        "purpose": "Later projects and major sections."
+      },
+      "body": {
+        "displayName": "Contribution",
+        "purpose": "Ownership and challenge explanations."
+      },
+      "detail": {
+        "displayName": "Engineering detail",
+        "purpose": "Expanded case studies and experience lists."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "disclosure-stroke",
+        "value": "transform .25s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Rotate the disclosure plus stroke into a minus."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition: none; animation: none; scroll-behavior: auto",
+        "purpose": "Respect prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "intermediate-max",
+        "value": "1150px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "767px"
+      },
+      {
+        "name": "tablet-header-min",
+        "value": "768px"
+      },
+      {
+        "name": "tablet-header-max",
+        "value": "1023px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "R\u00e9sum\u00e9 link",
+      "kind": "button",
+      "refersTo": "resume-link",
+      "description": "Filled anchor for opening the r\u00e9sum\u00e9.",
+      "html": "<a class=\"ds-resume\" href=\"/static/resume.pdf\">R\u00e9sum\u00e9 <svg aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 18 18 6M6 6h12v12\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-resume{display:inline-flex;align-items:center;gap:16px;padding:14px 20px;background:var(--ink);color:var(--paper);font:400 16px Manrope,sans-serif;text-decoration:none}.ds-resume:hover{background:var(--accent)}.ds-resume:focus-visible{outline:2px solid var(--accent);outline-offset:5px}"
+    },
+    {
+      "name": "Text link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Quiet text-and-arrow link for profile destinations.",
+      "html": "<a class=\"ds-link\" href=\"#contact\">Contact <svg aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 18 18 6M6 6h12v12\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-link{display:inline-flex;align-items:center;gap:12px;color:var(--ink);font:400 16px Manrope,sans-serif;text-decoration:none}.ds-link:hover{color:var(--accent)}.ds-link:focus-visible{outline:2px solid var(--accent);outline-offset:5px}"
+    },
+    {
+      "name": "Primary navigation",
+      "kind": "nav",
+      "description": "Open horizontal anchors with a filled r\u00e9sum\u00e9 action.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary\"><a href=\"#work\">Work</a><a href=\"#experience\">Experience</a><a href=\"#about\">About</a><a href=\"#contact\">Contact</a><a class=\"ds-nav-resume\" href=\"/static/resume.pdf\">R\u00e9sum\u00e9 <svg aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 18 18 6M6 6h12v12\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;flex-wrap:wrap;gap:24px;font:400 16px Manrope,sans-serif;color:var(--ink)}.ds-nav a{padding-block:12px;text-decoration:none;color:inherit}.ds-nav a:hover{color:var(--accent)}.ds-nav a:focus-visible{outline:2px solid var(--accent);outline-offset:5px}.ds-nav .ds-nav-resume{display:flex;align-items:center;gap:16px;padding:14px 20px;background:var(--ink);color:var(--paper)}.ds-nav .ds-nav-resume:hover{background:var(--accent)}"
+    },
+    {
+      "name": "Engineering disclosure",
+      "kind": "custom",
+      "refersTo": "engineering-disclosure",
+      "description": "Native expandable engineering detail with a rotating plus stroke.",
+      "html": "<details class=\"ds-details\"><summary>Inside the engineering<span class=\"ds-plus\" aria-hidden=\"true\"></span></summary><div class=\"ds-detail-copy\">Engineering details appear in place.</div></details>",
+      "css": ".ds-details{margin-top:10px;border-bottom:1px solid var(--line);color:var(--ink);font:400 16px Manrope,sans-serif}.ds-details summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 0 24px;list-style:none;cursor:pointer}.ds-details summary::-webkit-details-marker{display:none}.ds-details summary:hover,.ds-details[open]>summary{color:var(--accent)}.ds-details summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}.ds-plus{position:relative;width:16px;height:16px}.ds-plus:before,.ds-plus:after{content:\"\";position:absolute;width:14px;height:1px;background:currentColor;top:7px;left:1px}.ds-plus:after{transform:rotate(90deg);transition:transform .25s cubic-bezier(.16,1,.3,1)}.ds-details[open] .ds-plus:after{transform:rotate(0)}.ds-detail-copy{max-width:75ch;padding:8px 0 32px;color:var(--muted);font-size:17px;line-height:1.8}@media(prefers-reduced-motion:reduce){.ds-plus:after{transition:none}}"
+    },
+    {
+      "name": "System stage",
+      "kind": "custom",
+      "refersTo": "system-band",
+      "description": "One observed voice-project stage from the full-width system path.",
+      "html": "<div class=\"ds-band\"><div class=\"ds-stage\"><span class=\"ds-symbol\"><svg viewBox=\"0 0 36 36\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\"><path d=\"M5 17v3m5-10v17m5-22v26m6-21v17m5-20v23m5-16v8\"/></svg></span><div><strong>Voice agent</strong><span>Streaming audio &amp; call state</span></div></div></div>",
+      "css": ".ds-band{background:var(--accent);color:var(--paper);padding:30px 24px 22px;font-family:Manrope,sans-serif}.ds-stage{display:flex;gap:20px;align-items:center}.ds-symbol{width:72px;height:72px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center;flex-shrink:0}.ds-symbol svg{width:36px;height:36px}.ds-stage strong{display:block;font-size:24px;line-height:1.25;font-weight:500}.ds-stage div>span{display:block;font-size:15px;line-height:1.5;margin-top:8px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Engineering Journal",
+    "overview": "Engineering Journal treats engineering work as readable evidence. Warm paper, dark ink, editorial serif headings, and quiet sans-serif explanations give the portfolio the character of a considered technical publication. Broad colored system bands make relationships visible without competing with the supplied project facts.\n\nThe system is code-led: open layouts, fine rules, native disclosures, and inline SVG carry its identity. The existing portrait serves as a small personal signature; it does not establish an image-heavy visual language.",
+    "keyCharacteristics": [
+      "Oversized serif headings with precise sans-serif reading type.",
+      "Flat paper surfaces, open rules, and broad project-colored system bands.",
+      "Native disclosures, visible keyboard focus, and restrained motion."
+    ],
+    "rules": [
+      {
+        "name": "The Paper and Ink Rule",
+        "body": "Keep reading surfaces on paper with ink or muted text; use vermilion for emphasis and interaction, and project colors for the corresponding system bands.",
+        "section": "colors"
+      },
+      {
+        "name": "The Open Journal Rule",
+        "body": "Separate content with space and fine rules rather than raised card shells.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** pair Instrument Serif headings with Manrope reading and navigation text.",
+      "**Do** use paper and ink as the default canvas, reserving colored bands for system explanations.",
+      "**Do** preserve native disclosure semantics, keyboard focus, and reduced-motion support.",
+      "**Do** keep diagrams as legible HTML and inline SVG that reflow vertically on mobile."
+    ],
+    "donts": [
+      "**Don't** wrap open journal sections in rounded, elevated cards.",
+      "**Don't** replace project-specific diagram symbols with unrelated decorative icons.",
+      "**Don't** use project bands as a rainbow of arbitrary interface states.",
+      "**Don't** add unsupported achievements or imagery that implies new factual evidence."
+    ]
+  }
+}
