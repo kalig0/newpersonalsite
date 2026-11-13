@@ -22,3 +22,10 @@ output/
 *.njsproj
 *.sln
 *.sw?
+
+# Local Impeccable installations and hooks
+.agents/skills/impeccable/
+.claude/skills/impeccable/
+.claude/agents/impeccable-*.md
+.claude/settings.local.json
+.codex/hooks.json
