@@ -62,8 +62,8 @@ test('generates a schema-checked bundle using stdin and a read-only, ephemeral C
   const disabledFeatures = invocation.args.filter((_, index) => invocation.args[index - 1] === '--disable');
   assert.deepEqual(disabledFeatures, ['shell_tool', 'apps', 'plugins', 'hooks', 'browser_use', 'browser_use_external', 'browser_use_full_cdp_access', 'computer_use', 'multi_agent']);
   assert.equal(invocation.args.some(arg => arg.includes('Ada Example')), false);
-  assert.equal(invocation.cwd, await realpath(join(runDir, task)));
-  assert.equal(await realpath(dirname(invocation.args[invocation.args.indexOf('--output-last-message') + 1])), invocation.cwd);
+  assert.equal(await realpath(invocation.cwd), await realpath(join(runDir, task)));
+  assert.equal(await realpath(dirname(invocation.args[invocation.args.indexOf('--output-last-message') + 1])), await realpath(invocation.cwd));
   assert.match(invocation.input, /canonical CV is the only authority/);
   assert.match(invocation.input, /Previous editorial example/);
   assert.match(invocation.input, /Keep exact job titles/);
