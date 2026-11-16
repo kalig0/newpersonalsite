@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "Daniel Yu",
-    "role": "Software Engineer",
+    "role": "Software Engineer | Machine Learning Engineer",
     "focus": "Conversational AI · Full-stack development · Cloud infrastructure",
     "email": "talldanielyu@gmail.com",
     "phone": "(650) 278-0824",
@@ -12,9 +12,9 @@
     "current": "Currently at eGain",
     "headline": "Building AI systems for",
     "headlineAccent": "real conversations.",
-    "intro": "I turn complex AI capabilities into useful, reliable products — from real-time voice agents to the workflows and infrastructure behind them.",
-    "about": "I’m Daniel, a software engineer working at the intersection of AI and product engineering. At eGain, I build conversational systems spanning telephony integrations, AI runtimes, full-stack authoring tools, and cloud infrastructure. My background in computer science and mathematics also shapes my work with language models, retrieval, and educational feedback.",
-    "resumeSummary": "Software engineer building production conversational AI systems across Genesys telephony integrations, Python runtimes, full-stack tools, and AWS infrastructure. Experience with real-time voice agents, workflow automation, retrieval-augmented generation, and LLM fine-tuning."
+    "intro": "I build conversational AI systems, full-stack workflow tools, and the cloud services that support them.",
+    "about": "I’m Daniel, a software and machine learning engineer. At eGain, I work on voice agents, workflow authoring and execution, retrieval augmented generation, and AWS infrastructure. My background includes computer science and mathematical sciences, with project work on language model fine-tuning and educational feedback through ASSISTments.",
+    "resumeSummary": "Software and machine learning engineer building conversational AI, real-time voice systems, full-stack workflow tools, and AWS infrastructure. Experience in retrieval augmented generation, language model fine-tuning, and educational feedback systems."
   },
   "navigation": [
     {
@@ -52,7 +52,7 @@
     "contact": {
       "eyebrow": "04 / Get in touch",
       "title": "Let’s build",
-      "intro": "Looking for an engineer to bring AI into a real product? I’d love to talk about your team and what you’re building.",
+      "intro": "Get in touch to discuss conversational AI, full-stack engineering, or machine learning.",
       "titleAccent": "something useful."
     }
   },
@@ -60,17 +60,20 @@
     {
       "id": "voice",
       "number": "01",
-      "category": "Production engineering / eGain",
+      "category": "Voice AI / eGain",
       "title": "Real-time voice agents",
-      "summary": "A real-time conversational voice system connecting phone calls through Genesys to a streaming AI runtime, knowledge retrieval, and speech generation.",
-      "contribution": "Designed and implemented the telephony-to-AI system, including Genesys connectivity, a reusable Python voice runtime, and bidirectional audio streaming.",
-      "challenge": "Keeping conversations responsive through interruptions, reconnects, and timeouts while isolating state for every call.",
+      "summary": "A real-time conversational voice-agent system connecting phone calls through Genesys to a streaming AI runtime, knowledge retrieval, and speech generation.",
+      "contribution": "Designed and implemented the system, including Genesys connectivity, a reusable Python voice runtime, and bidirectional audio streaming.",
+      "challenge": "Handling audio-format conversion, interruptions, connection recovery, and isolated state for each call.",
       "details": [
         "Built Genesys connectivity for call-session lifecycle management, media-protocol handling, connection validation, control messages, playback notifications, and operational logging.",
-        "Implemented audio-format conversion, interruption and barge-in handling, connection recovery, isolated per-call state, interruption-aware cancellation, and graceful timeout recovery.",
-        "Coordinated knowledge retrieval, intent processing, follow-up questions, and speech generation, with safeguards against using unvalidated information in generated responses.",
-        "Developed a supporting browser voice client with microphone capture, audio playback, connection controls, real-time audio visualization, tool-execution states, and WebSocket connection recovery.",
-        "Containerized the service for AWS deployment with health checks, access controls, secrets management, and centralized logging; added automated tests across protocols, orchestration, latency management, and failure recovery."
+        "Implemented bidirectional audio streaming with audio-format conversion, interruption and barge-in handling, connection recovery, and isolated per-call state.",
+        "Created a reusable Python voice runtime for configuration loading, call coordination, typed state, tool registration, intent processing, retrieval, speech generation, and resource cleanup.",
+        "Implemented intent-aware orchestration for knowledge retrieval, follow-up questions, and customer-support interactions, with safeguards against unvalidated information in generated responses.",
+        "Added status acknowledgments matching the agent’s voice, cumulative turn timing, interruption-aware cancellation, and graceful timeout recovery.",
+        "Developed a browser voice client with microphone capture, audio playback, connection controls, real-time audio visualization, tool-execution states, and WebSocket connection recovery.",
+        "Containerized the voice service and integrated it into AWS deployment workflows with health checks, access controls, secrets management, centralized logging, and environment-specific configuration.",
+        "Added automated tests covering voice configuration, orchestration, retrieval, intent validation, latency management, audio protocols, WebSocket lifecycle, frontend behavior, and failure recovery."
       ],
       "technologies": [
         "Genesys",
@@ -79,63 +82,61 @@
         "AWS"
       ],
       "system": [
-        "Phone calls via Genesys",
-        "Voice runtime",
-        "Retrieval & speech"
+        "Phone calls through Genesys",
+        "Streaming AI runtime",
+        "Knowledge retrieval and speech generation"
       ],
-      "focus": "Telephony · Streaming audio · Call state"
+      "focus": "Telephony · Audio streaming · Call state"
     },
     {
       "id": "workflows",
       "number": "02",
-      "category": "Full-stack product / eGain",
+      "category": "Workflow automation / eGain",
       "title": "AI workflow authoring and execution",
-      "summary": "Visual authoring and execution tools for customer-support workflows, spanning typed variables, API actions, branching, and AI or human handoffs.",
-      "contribution": "Owned features from requirements through release: React/TypeScript authoring interfaces, Python/Pydantic APIs, OpenAPI contracts, and DynamoDB models.",
-      "challenge": "Preserving valid references, version history, and session context as workflows are edited, published, and executed.",
+      "summary": "Visual authoring and execution tools for workflows with typed variables, API actions, conditional branching, escalation, and transitions between workflows and AI agents.",
+      "contribution": "Owned features from requirements through release, building React/TypeScript authoring interfaces, Python/Pydantic APIs, OpenAPI contracts, and DynamoDB-backed data models.",
+      "challenge": "Maintaining valid node references, version history, legacy compatibility, and session context through authoring, publication, and execution.",
       "details": [
-        "Built draft and publication lifecycles, read-only previews, publish-time validation, and compatibility with legacy records.",
-        "Implemented session-context propagation between pre-chat workflows, customer widgets, WebSocket services, and conversational AI pipelines.",
-        "Strengthened message ordering, execution recovery, variable normalization, and loop prevention, with tests across authoring, API, persistence, and runtime behavior."
+        "Developed visual authoring capabilities for typed variables, question and statement nodes, external API actions, query filters, conditional branching, escalation, and transitions between workflows and AI agents.",
+        "Implemented draft and publication lifecycles, version history, read-only previews, publish-time validation, and node-reference validation while maintaining compatibility with legacy workflow records.",
+        "Built session-context propagation across pre-chat workflows, customer-facing widgets, WebSocket services, and conversational AI pipelines.",
+        "Improved execution through variable normalization, conversation-history handling, execution recovery, message ordering, loop prevention, and human/AI handoffs.",
+        "Defined typed API contracts and persistence models for workflow definitions, execution state, node configuration, metadata, and versioned records.",
+        "Added unit tests covering workflow models, runtime behavior, API validation, persistence, publication checks, and frontend authoring components."
       ],
       "technologies": [
-        "TypeScript",
         "React",
+        "TypeScript",
+        "Python",
         "Pydantic",
+        "OpenAPI",
         "DynamoDB"
       ],
       "system": [
-        "Visual authoring",
-        "Validate & publish",
-        "Workflow runtime"
+        "Visual workflow authoring",
+        "Publication validation",
+        "Workflow execution"
       ],
-      "focus": "Typed contracts · Versioning · Handoffs"
+      "focus": "Typed APIs · Version history · Workflow execution"
     },
     {
       "id": "assistments",
       "number": "03",
-      "category": "Applied ML / Research",
-      "title": "ASSISTments educational feedback",
-      "date": "Jan 2023 - Present",
-      "summary": "Language-model fine-tuning and retrieval-augmented generation for feedback on students’ responses to math questions.",
-      "contribution": "Fine-tuned LLMs with QLoRA, trained models with TensorFlow on millions of student responses, and implemented FAISS-based retrieval.",
-      "challenge": "Using relevant student-response data to improve the accuracy of generated educational feedback and scores.",
+      "category": "Applied machine learning / Project",
+      "title": "ASSISTments",
+      "date": "Jan 2023 – Present",
+      "summary": "Language model fine-tuning and retrieval augmented generation for feedback on student responses to math questions.",
+      "contribution": "Fine-tuned large language models with QLoRA to enhance feedback accuracy for student responses to math questions.",
       "details": [
-        "Developed model-training and feedback-improvement strategies using millions of student responses.",
-        "Implemented a FAISS vector database for retrieval-augmented feedback and scoring, improving generated-content accuracy by 30%."
+        "Trained TensorFlow models on millions of student responses to develop and implement improvement strategies for student feedback.",
+        "Implemented a FAISS vector database for retrieval augmented generation to generate feedback and scores for student responses, improving large language model generated content accuracy by 30%."
       ],
       "technologies": [
         "QLoRA",
         "TensorFlow",
-        "FAISS",
-        "RAG"
+        "FAISS"
       ],
-      "system": [
-        "Student response",
-        "Retrieve context",
-        "Generate feedback"
-      ],
-      "focus": "Fine-tuning · Retrieval · Feedback accuracy"
+      "focus": "Fine-tuning · Retrieval augmented generation · Educational feedback"
     }
   ],
   "experience": [
@@ -143,51 +144,57 @@
       "company": "eGain",
       "role": "Software Development Engineer",
       "location": "Sunnyvale, CA",
-      "date": "Jan 2025 - Present",
+      "date": "Jan 2025 – Present",
       "bullets": [
         "Designed and implemented real-time voice agents connecting phone calls through Genesys to a streaming AI runtime, knowledge retrieval, and speech generation.",
-        "Owned full-stack AI workflow automation, including visual authoring, typed APIs, versioned persistence, publication validation, and execution recovery.",
-        "Implemented RAG using embeddings, semantic and hybrid search, OpenSearch, reranking, metadata filters, and structured conversation context.",
-        "Built and maintained AWS services and containerized release workflows with health checks, access controls, secrets management, and centralized logging."
+        "Owned full-stack AI workflow automation features, including visual authoring, typed APIs, versioned persistence, publication validation, and execution recovery.",
+        "Implemented retrieval augmented generation with embeddings, semantic and hybrid search, OpenSearch, reranking, certified-answer flows, metadata filters, and structured conversation context.",
+        "Enhanced customer and contact-center messaging through authentication, theming, pre-chat workflows, portal-context integration, WebSocket messaging, user-context propagation, and localization.",
+        "Designed and maintained AWS infrastructure and release workflows, with authentication controls, secrets handling, audit logging, and security improvements."
       ],
       "resumeDetails": [
-        "Created a reusable Python voice runtime for configuration loading, call coordination, typed state, tool registration, intent processing, retrieval, speech generation, and resource cleanup.",
-        "Built Genesys call-session and media-protocol handling; implemented audio conversion, barge-in handling, connection recovery, isolated per-call state, voice-matched status acknowledgments, cancellation, and timeout recovery.",
-        "Developed a supporting browser voice client with microphone capture, audio playback, connection controls, audio visualization, tool-execution states, and WebSocket connection recovery.",
-        "Built React/TypeScript workflow interfaces, Python/Pydantic APIs, OpenAPI contracts, and DynamoDB-backed models with draft/publication lifecycles and legacy compatibility.",
-        "Improved context propagation, conversation-history handling, message ordering, variable normalization, loop prevention, and human/AI handoffs across widgets, workflows, and AI runtimes.",
-        "Added automated tests across voice protocols, retrieval, orchestration, latency management, workflow validation, persistence, frontend behavior, and failure recovery.",
-        "Developed GitHub Actions and Docker/ECR releases; maintained AWS infrastructure using DynamoDB, OpenSearch, S3, SQS, CloudFront, IAM, AWS SAM, and Terraform."
+        "Built Genesys call-session lifecycle management and media-protocol handling, bidirectional audio streaming, audio-format conversion, interruption and barge-in handling, connection recovery, and isolated per-call state.",
+        "Created a reusable Python voice runtime for configuration, call coordination, typed state, tool registration, intent processing, retrieval, speech generation, and resource cleanup.",
+        "Implemented intent-aware voice orchestration with safeguards against unvalidated information in generated responses, status acknowledgments, cumulative turn timing, cancellation, and timeout recovery.",
+        "Developed a browser voice client with microphone capture, audio playback, connection controls, real-time audio visualization, tool-execution states, and WebSocket connection recovery.",
+        "Built React/TypeScript authoring interfaces, Python/Pydantic APIs, OpenAPI contracts, and DynamoDB-backed models with draft and publication lifecycles, version history, validation, and legacy compatibility.",
+        "Improved session-context propagation, conversation-history handling, message ordering, variable normalization, execution recovery, loop prevention, and human/AI handoffs.",
+        "Maintained conversational AI runtimes and improved multilingual knowledge routing, prompt orchestration, article-metadata preservation, retrieval tracing, knowledge-source filtering, and intent persistence.",
+        "Added automated tests across voice configuration, protocols, orchestration, retrieval, latency management, workflow validation, persistence, frontend behavior, and failure recovery.",
+        "Designed and maintained AWS services and infrastructure with DynamoDB, OpenSearch, S3, SQS, CloudFront, IAM, containerized workloads, AWS SAM, and Terraform.",
+        "Developed GitHub Actions and Docker/ECR release workflows supporting semantic versioning, automated build artifacts, environment-specific deployments, and reusable stack operations.",
+        "Implemented authentication controls, request validation, signed file delivery, API audit logging, and secrets handling; contributed to Fortify and FOSSA scans, vulnerability remediation, and compliance-aligned CI/CD controls."
       ]
     },
     {
       "company": "CVTE",
       "role": "Machine Learning Engineer Intern",
       "location": "Guangzhou, China",
-      "date": "May 2024 - Jul 2024",
+      "date": "May 2024 – July 2024",
       "bullets": [
-        "Enhanced model logic for a system used in over 5 million classrooms, improving generated classroom analysis by 20%.",
-        "Analyzed engagement data with Python and Matplotlib; collaborated with eight engineers to deliver new LLM implementations every two weeks."
+        "Developed and implemented logic enhancements for a machine learning model used in over 5 million classrooms, improving generated classroom analysis by 20%.",
+        "Processed classroom data with Python, Matplotlib, and Pyplot to identify dips in classroom engagement.",
+        "Collaborated in an Agile/Scrum team of 8 engineers to deliver new large language model implementations every 2 weeks."
       ]
     },
     {
       "company": "ReadMKT",
       "role": "Software Engineer",
       "location": "San Francisco, CA",
-      "date": "Aug 2022 - Aug 2023",
+      "date": "Aug 2022 – Aug 2023",
       "bullets": [
-        "Led development of a JavaScript rich text editor for intuitive content editing, media embedding, and WYSIWYG formatting.",
-        "Implemented infinite scrolling with lazy loading to improve the browsing experience and page performance."
+        "Led development of a JavaScript rich text editor for content editing, media embedding, and WYSIWYG formatting.",
+        "Implemented infinite scrolling with lazy loading, enhancing the user experience and improving page performance."
       ]
     },
     {
       "company": "7G BioVentures",
       "role": "Full Stack Developer Intern",
       "location": "San Francisco, CA",
-      "date": "May 2022 - Aug 2022",
+      "date": "May 2022 – Aug 2022",
       "bullets": [
-        "Built a responsive React dashboard for employees to track and manage investment projects.",
-        "Created modular frontend components and reusable design patterns for scalable UI architecture."
+        "Built a responsive internal React dashboard for employees to track and manage investment projects.",
+        "Created modular front-end components with reusable design patterns for scalable UI architecture."
       ]
     }
   ],
@@ -195,14 +202,14 @@
     {
       "school": "Worcester Polytechnic Institute",
       "degree": "MS in Computer Science",
-      "date": "Aug 2023 - May 2025",
+      "date": "Aug 2023 – May 2025",
       "location": "Worcester, MA",
       "detail": "Fine-tuned LLMs and built a RAG pipeline for educational feedback, improving teacher response quality by 30%."
     },
     {
       "school": "University of California, Santa Barbara",
       "degree": "BS in Mathematical Sciences",
-      "date": "Aug 2018 - Jun 2022",
+      "date": "Aug 2018 – June 2022",
       "location": "Santa Barbara, CA"
     }
   ],
@@ -212,6 +219,7 @@
       "items": [
         "Python",
         "TypeScript",
+        "JavaScript",
         "C++",
         "HTML",
         "CSS"
@@ -234,10 +242,12 @@
         "React",
         "Node.js",
         "Pydantic",
+        "OpenAPI",
         "AWS",
         "Docker",
         "DynamoDB",
-        "Terraform"
+        "Terraform",
+        "GitHub Actions"
       ]
     }
   ]

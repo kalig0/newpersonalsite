@@ -1,3 +1,8 @@
 *.pdf binary
 *.png binary
 *.jpg binary
+# Preserve exact bytes used by CV source and artifact provenance hashes.
+assets/cv.md -text
+src/content/portfolio.json -text
+public/static/resume.meta.json -text
+public/static/resume.pdf binary

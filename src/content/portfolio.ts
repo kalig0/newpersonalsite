@@ -5,14 +5,15 @@ export interface CaseStudy {
   number: string;
   category: string;
   title: string;
-  date?: string;
+  shortLabel?: string | null;
+  date?: string | null;
   summary: string;
-  contribution: string;
-  challenge: string;
-  details: string[];
-  technologies: string[];
-  system: string[];
-  focus: string;
+  contribution?: string | null;
+  challenge?: string | null;
+  details?: string[] | null;
+  technologies?: string[] | null;
+  system?: string[] | null;
+  focus?: string | null;
 }
 
 export interface Experience {

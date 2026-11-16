@@ -9,7 +9,7 @@ export default function Hero() {
     <div className="hero-bottom">
       <div className="hero-intro"><p>{profile.intro}</p><div className="hero-actions"><a className="button button-primary" href="#work">View selected work <Arrow /></a><a className="text-link" href={profile.resume}>View résumé <Arrow diagonal /></a></div></div>
       <div className="hero-index" aria-label="Engineering focus">
-        {caseStudies.map((study, index) => <a key={study.id} href={`#${study.id}`}><span>0{index + 1}</span>{['Voice agents', 'AI workflows', 'Applied ML'][index]}<Arrow diagonal /></a>)}
+        {caseStudies.map((study, index) => <a key={study.id} href={`#${study.id}`}><span>{String(index + 1).padStart(2, '0')}</span>{study.shortLabel || study.title}<Arrow diagonal /></a>)}
       </div>
     </div>
     <div className="hero-footnote"><span>{profile.focus}</span><a href="#work">Explore the work <span aria-hidden="true">↓</span></a></div>

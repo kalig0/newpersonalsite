@@ -26,11 +26,14 @@ Visitors browse a single-page portfolio, inspect case-study disclosures, review 
 
 - Static React and TypeScript site built with Vite; no contact backend.
 - Native anchor navigation connects Work, Experience, About, and Contact.
-- `src/content/portfolio.json` is the shared source for website and résumé content. Preserve factual accuracy across both outputs.
-- `scripts/build_resume.py` generates the two-page résumé at `output/pdf/daniel-yu-resume.pdf` and `public/static/resume.pdf`. After résumé edits, regenerate and visually inspect both pages as documented in README.md.
+- `assets/cv.md` is the publicly tracked master source for facts. Codex prepares derived website copy in `src/content/portfolio.json` and a general Software Engineering / AI resume payload from it. Preserve factual accuracy across both outputs.
+- Portable Node 26/npm commands configure career-ops, synchronize content, optionally publish, and watch local CV saves. Career-ops receives a managed, gitignored CV snapshot; CV edits target the Portfolio master.
+- Career-ops' current template and renderer generate the English, US Letter résumé with a strict two-page limit at `public/static/resume.pdf`. Validate source coverage, titles, dates, facts, ATS structure, and selectable text before replacing outputs. After résumé edits, visually inspect both pages as documented in README.md.
+- Generation and publication operate on a consistent CV hash. Stale or failed runs preserve successful outputs. Publication commits only enumerated CV artifacts on `main` and uses the existing push-to-deploy setup.
+- Selected-work content can add supported new projects within the existing design. Sparse entries omit unsupported engineering detail and diagrams.
 - Contact is through email, LinkedIn, and GitHub; the résumé is available at `/static/resume.pdf`.
 - Existing keyboard-accessible disclosures, skip navigation, and reduced-motion support are implementation commitments to preserve.
-- No additional product-specific accessibility standard or deployment changes were established during init.
+- A one-time LinkedIn Featured link points to the stable portfolio résumé URL; uploaded LinkedIn documents remain separate copies.
 
 ## Brand Commitments
 
@@ -38,8 +41,9 @@ Preserve Daniel Yu's identity, production AI/full-stack positioning, and existin
 
 ## Evidence on Hand
 
-- `src/content/portfolio.json`: profile, three case studies, professional experience, education, and skills. Existing case-study subjects are real-time voice agents, AI workflow authoring and execution, and ASSISTments educational feedback.
-- `public/static/resume.pdf`: downloadable résumé, generated from the same content.
+- `assets/cv.md`: canonical work, education, projects, and skills supplied by Daniel.
+- `src/content/portfolio.json`: derived profile, case studies, professional experience, education, and skills. Existing case-study subjects are real-time voice agents, AI workflow authoring and execution, and ASSISTments educational feedback.
+- `public/static/resume.pdf`: downloadable résumé, generated from the master CV through career-ops.
 - `public/images/avatar.jpg`: existing portrait.
 - `public/images/`: existing identity, preview, and technology assets; asset presence alone does not require displaying them.
 - Numerical results in the content are existing supplied claims; init did not independently validate them. Preserve their meaning and scope rather than inventing or expanding results, testimonials, or proof.
